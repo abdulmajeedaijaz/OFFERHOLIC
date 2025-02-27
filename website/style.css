@@ -1,0 +1,1310 @@
+/*
+Theme Name: My Custom Theme
+Author: Your Name
+Description: A custom WordPress theme
+Version: 1.0
+*/
+
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+/* ===== Colours ===== */
+:root{
+    --body-color: #ffffff;
+    --nav-color: #000102;
+    --side-nav: #010718;
+    --text-color: #ffffff;    
+}
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+    color: #000102;    
+}
+.inverted {
+    filter: invert(100%);
+}
+.inverted p, .inverted h1, .inverted h2, .inverted .text-content {
+    filter: invert(100%);
+}
+body.dark{
+    --body-color: #18191A;
+   /* --nav-color: #242526;*/
+   --nav-color: #080000;
+    --side-nav: #242526;
+    --text-color: #CCC;
+    color: var(--text-color);
+}
+/* General Navbar Styles */
+nav {
+    border-radius: 25px; /* Rounded shape */
+   width: 85%; /* Not full width */
+    margin: 3px auto; /* Centering */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+}
+body.dark nav {
+    border: 1px solid #020202;
+}
+/* Navbar Container */
+nav .nav-bar {
+    border-radius: 25px;
+    width: 90%;
+    margin: 3px auto;
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+   /* background-color: var(--nav-color);*/
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Sidebar Icon */
+.nav-bar .sidebarOpen {
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+/* Logo Styling */
+.nav-bar .logo {
+    height: 40px; 
+    width: auto;
+    vertical-align: middle;
+}
+
+.nav-bar .logo a {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+/* Hide toggle logo inside menu */
+.menu .logo-toggle {
+    display: none;
+}
+/* Navigation Links */
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+}
+/* Navbar List Items */
+.nav-bar .nav-links li {
+    margin: 0 5px;
+    list-style: none;
+}
+/* Navbar Links */
+.nav-bar .nav-links li a {
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+/* Hover Effect for Navbar Links */
+.nav-bar .nav-links li a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+
+/* Navbar Right Section */
+.nav-bar .darkLight-searchBox {
+    display: flex;
+    align-items: center;
+}
+/* Ensuring Navbar List Styles Do Not Affect Footer */
+.nav-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav-bar ul li {
+    margin: 0 10px;
+}
+/* Navbar Links */
+.nav-bar ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: var(--text-color);
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+/* Navbar Active & Hover Effects */
+.nav-bar ul li a.active,
+.nav-bar ul li a:hover {
+    background: linear-gradient(to right, #ff0000, #ed5858);
+    color: var(--text-color);
+    font-weight: bold;
+}
+.darkLight-searchBox .dark-light{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+.dark-light i{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*nav css ends*/
+/*about section  starts*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns with different widths */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between text and image */
+    padding: 5%;
+   /* margin-top: 80px;*/
+  }
+  
+  .text-content {
+    font-size: 18px; /* Font size for text content */
+  }
+  
+  .image-content img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Optional: Adds rounded corners */
+  }
+  
+/*about section css ends*/
+/*Merchant opportunities section starts*/
+.text-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  p {
+    text-align: center;
+  }
+  .text-content {
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+  }
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 5px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px auto;
+    }
+    .card {
+    /*border: 1px solid #ddd;*/
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    /* background: #fff;*/
+    }
+    .card:hover {
+        transform: translateY(-5px); /* Moves the whole card slightly up */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for a lifting effect */
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px auto;
+        }
+        
+        .card {
+        width: calc(50% - 10px); /* 2 cards per row */
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        /* background: #fff;*/
+        }
+        .card img {
+        width: 100%; /* Make the image fit inside the card */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 500px; /* Set a maximum height to prevent large images */
+        object-fit: cover; /* Crop the image to fit nicely */
+        border-radius: 10px; /* Optional: rounded corners */
+        }
+/*Offersholic App Features*/
+/*Merchant opportunities section starts*/
+
+  
+  .card2 {
+   /* background-color: #fff;*/
+   /* border: 1px solid #ddd;*/
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px; /* Optional: rounded corners */
+  }
+  
+  .content2 {
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #666;
+  }
+  .container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+  }
+  .card2:hover:hover {
+    transform: translateY(-5px); /* Moves the whole card slightly up */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for a lifting effect */
+  }
+/*Offersholic App Features ends */
+
+/*oppurtunities*/
+
+.grid-container-opportunities {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Two columns with different widths */
+  align-items: center; /* Align items vertically */
+  gap: 5px; /* Space between text and image */
+  padding: 5%;
+  margin-top:0%;
+}
+
+.text-content-opportunities {
+  font-size: 18px; /* Font size for text content */
+}
+
+.image-content-opportunities img  {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* Optional: Adds rounded corners */
+}
+
+/*why section*/
+
+.about{
+  margin-bottom: 0%;
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; /* Two columns with different widths */
+  align-items: center; /* Align items vertically */
+  gap: 5px; /* Space between text and image */
+  padding: 5%;
+ /* margin-top:0%;*/
+}
+
+.text-content2 {
+  font-size: 50px; /* Font size for text content */
+}
+
+.image-content2 img  {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* Optional: Adds rounded corners */
+}
+
+/*app features section*/
+
+.app-features {
+  text-align: center;
+  padding: 40px 20px;
+
+}
+
+.app-features-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-wrap: wrap;  /* Allows items to wrap on smaller screens */
+}
+
+.features-section {
+  /*width: 300px;*/
+  width: calc(33.33% - 20px); /* 3 cards per row */
+/*  background: white;*/
+  border-radius: 10px;
+  padding: 15px;
+  /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
+  text-align: center;
+  flex: 1 1 300px; /* Flexible width with a minimum of 300px */
+  max-width: 400px; /* Prevents oversized elements */
+}
+
+
+.features-section:hover {
+  transform: translateY(-5px); /* Moves the whole card slightly up */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for a lifting effect */
+}
+.features-section img {
+  object-fit: cover; /* Crop the image to fit nicely */
+  border-radius: 10px; /* Optional: rounded corners */
+  width: 250px; /* Adjust as needed */
+  height: 250px; /* Adjust as needed */
+  object-fit: cover; /* Ensures images fill the space without distortion */
+  border-radius: 18px; /* Keeps a uniform rounded style */
+}
+
+.features-section h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.features-section p {
+  font-size: 14px;
+ /* color: #666;*/
+}
+
+/*subscriptiion section*/
+.package-section {
+  padding: 50px 80px;
+}
+.package-section h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.package-section p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.package-card {
+  /*background: #000000;*/
+  width: 300px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  justify-content: center;
+
+}
+.package-card:hover {
+  transform: translateY(-5px);
+}
+.package-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  /*color: #222;*/
+}
+.package-price {
+  font-size: 22px;
+  color: #28a745;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.package-features li {
+  padding: 5px 0;
+}
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition:  0.3s;
+}
+.btn:hover {
+  background: #0056b3;
+}
+*/
+
+/* Default styling for larger screens */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns on desktop */
+  gap: 0px;
+  justify-content: center;
+}
+/*footer*/
+
+footer {
+  background-color: #333;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 30%;
+  margin: 20px;
+}
+.footer-column p{
+  color: #fff;
+  font-size: 13px;
+} 
+.footer-column h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul  {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 11px;
+  color: #fff;
+}
+
+.footer-column li  {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #ccc;
+}
+
+.subscribe-container {
+  text-align: center;
+  background: white;
+  padding: 15px; /* Reduce padding */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;  /* Reduce overall width */
+  max-width: 300px; /* Set a smaller max-width */
+}
+
+.subscribe-container h3 {
+  margin-bottom: 10px;
+  font-size: 16px; /* Decrease heading size */
+  color:#333
+}
+.subscribe-container input {
+  width: 100%; /* Keep it full width */
+  padding: 3px; /* Reduce padding */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px; /* Reduce text size */
+  outline: none;
+}
+.subscribe-container button {
+  width: 80%; /* Adjust width */
+  padding: 8px; /* Reduce padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px; /* Reduce button text size */
+  transition: 0.3s ease;
+}
+.subscribe-container button:hover {
+  background-color: #0056b3;
+}
+.footer-column:not(:last-child) {
+  border-right: 1px solid #fff;
+}
+.app-button {
+  width: 150px; /* Adjust size */
+  margin: 10px;
+  transition: 0.3s;
+  border-radius: 5px;
+  /*margin-top: px;*/
+}
+
+.app-button:hover {
+  opacity: 0.3; /* Hover effect */
+}
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/*Offersholic App Features ends*/
+
+/*                           media tags for all                     */
+
+
+/* Mobile styles */
+
+@media only screen and (max-width: 768px) {
+
+  /*opportunities section*/
+
+  .text-content-opportunities{
+    font-size: 12px;
+  }
+  .box ul li {
+    font-size: 12px;
+  }
+  .image-content-opportunities img {
+    width: 90%;
+    height: auto;
+  }
+
+/*why section*/
+  .text-content2{
+    font-size: 15px;
+  }
+  /*about section starts*/
+  .grid-container {
+    grid-template-columns: 1fr 1.5fr; /* Maintain two columns on smaller screens */
+  }
+  .text-content-about {
+    font-size: 11px; /* Reduce font size on smaller screens */
+  }
+  .image-content img {
+    width: 95%;
+    height: auto;
+  }
+/*about section ends*/
+/**Merchant opportunities section starts */
+.container {
+  grid-template-columns: repeat(1, 1fr); /* 2 columns in mobile */
+  }
+  .card {
+  padding: 10px;
+  }
+  .icon {
+  width: 60px;
+  height: 6px;
+  }
+  h2 {
+  font-size: 16px;
+  }
+  p {
+  font-size: 12px;
+  }
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    padding: 4px;
+  }
+  .card img {
+    width: 70%;
+    height: 70%;
+    border-radius: 5px; /* Optional: rounded corners */
+  }
+  .card h3 {
+    font-size: 16px;
+  }
+  .card p {
+    font-size: 12px;
+  }
+/**Merchant opportunities section ends */
+
+
+.app-features {
+  text-align: center;
+  padding: 20px;
+}
+.app-features-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;  /* Allows items to wrap on smaller screens */
+}
+.features-section {
+  /*width: 300px;*/
+  width: calc(33.33% - 20px); /* 3 cards per row */
+/*  background: white;*/
+  border-radius: 10px;
+  padding: 10px;
+  /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
+  text-align: center;
+  flex: 1 1 60px; /* Flexible width with a minimum of 300px */
+  max-width: 230px; /* Prevents oversized elements */
+}
+.features-section img {
+  object-fit: cover; /* Crop the image to fit nicely */
+  border-radius: 10px; /* Optional: rounded corners */
+  width: 140px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  object-fit: cover; /* Ensures images fill the space without distortion */
+
+}
+.features-section h3 {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+.features-section p {
+  font-size: 9px;
+
+}
+/*feature section ends*/
+
+
+.package-section li{
+
+font-size: 15px;
+}
+/* footer*/
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    padding: 10px;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .copyright {
+    font-size: 4px;
+  }
+  .footer-column {
+    width: 25%;
+    margin: 10px;
+  }
+  .subscribe-container {
+      width: 75%;
+      padding: 4px;
+  }
+
+  .subscribe-container h3 {
+      font-size: 12px;
+  }
+
+  .subscribe-container input, 
+  .subscribe-container button {
+      padding: 0px;
+      font-size: 14px;
+  }
+  .app-button {
+      width: 70%; /* Medium size for tablets */
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  /*opportunities section*/
+  .image-content-opportunities img {
+    width: 90%;
+    height: auto;
+  }
+  .text-content-opportunities{
+    font-size: 12px;
+  }
+  .box ul li {
+    font-size: 11px;
+  }
+  /*why section ends*/
+  .text-content2{
+    font-size: 19px;
+  }
+  /*about section starts*/
+  .grid-container {
+    grid-template-columns: 1fr 1.5fr; /* Maintain two columns on very small screens */
+  }
+  .text-content {
+    font-size: 14px; /* Reduce font size on very small screens */
+  }
+  .image-content img {
+    width: 90%;
+    height: auto;
+  }
+/*about section  ends*/
+
+  /**Merchant opportunities section starts */
+  .container {
+    padding: 10px;
+  }
+  .card {
+    padding: 5px;
+  }
+  .card img {
+    width: 70%;
+    height: 70%;
+  }
+  .card h3 {
+    font-size: 14px;
+  }
+  .card p {
+    font-size: 10px;
+  }
+/**Merchant opportunities section ends */
+
+/*exclusive plans section ends*/ 
+    
+.app-features {
+  text-align: center;
+  padding: 20px;
+}
+.app-features-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;  /* Allows items to wrap on smaller screens */
+}
+.features-section {
+  /*width: 300px;*/
+  width: calc(33.33% - 20px); /* 3 cards per row */
+/*  background: white;*/
+  border-radius: 10px;
+  padding: 10px;
+  /*box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);*/
+  text-align: center;
+  flex: 1 1 60px; /* Flexible width with a minimum of 300px */
+  max-width: 130px; /* Prevents oversized elements */
+}
+.features-section img {
+  object-fit: cover; /* Crop the image to fit nicely */
+  border-radius: 10px; /* Optional: rounded corners */
+  width: 75px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  object-fit: cover; /* Ensures images fill the space without distortion */
+
+}
+.features-section h3 {
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+.features-section p {
+  font-size: 9px;
+
+}
+/*feature section ends*/
+
+.packages {
+  flex-direction: column;
+  align-items: center;
+
+}
+.package-card {
+  width: 90%; /* Adjusts width for better mobile view */
+  max-width: 175px;
+  justify-content: center;
+}
+.package-section li {
+font-size: 11px;
+}
+
+
+/* footer*/
+
+.footer-column {
+    width: 50%;
+    margin: 5px;
+  }
+  .subscribe-container {
+      width: 100%;
+      padding: 10px;
+      max-width: 100px; /* Make it smaller on small screens */
+  }
+
+  .subscribe-container h3 {
+      font-size: 10px;
+  }
+  .subscribe-container input,
+  .subscribe-container button {
+      padding: 4px;
+      font-size: 10px;
+  }
+  .container {
+    padding: 10px;
+  }
+  .card {
+    padding: 5px;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 10px;
+  }
+  .copyright {
+    font-size: 8px;
+  }
+}
+
+
+@media (max-width: 790px) {
+  nav .nav-bar .sidebarOpen{
+    display: block;
+}
+
+.menu{
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    left: -100%;
+    right:-90%;
+    top: 0;
+    padding: 20px;
+    background-color: var(--side-nav);
+    z-index: 100;
+    transition: all 0.4s ease;
+}
+
+nav.active .menu{
+    left: -0%;
+}
+
+nav.active .nav-bar .navLogo a{
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.menu .logo-toggle{
+    display: block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-toggle {
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.siderbarClose {
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-bar .nav-links{
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.nav-links li a{
+    display: block;
+    margin-top: 20px;
+}
+}
+
+
+.app-logo-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  /*justify-content: space-between;*/
+}
+
+.app-logo-section img {
+  width: 70%;
+  height: 50%;
+  margin: 20px;
+}
+
+/* Default styling for larger screens */
+.packages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Mobile-friendly responsive fix */
+@media (max-width: 768px) {
+  .packages {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centering items */
+      gap: 15px;
+  }
+
+  .package-card {
+      width: 90%; /* Ensures it fits within screen */
+      max-width: 400px; /* Prevents it from getting too large */
+      text-align: center; /* Centers text */
+  }
+
+  /* Fixing any potential overflow */
+  body, html {
+      overflow-x: hidden;
+  }
+}
+
+
+.hero {
+  margin-top: 7%;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('images/best.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-size: 100%; /* Reduce size */
+  background-position: center;
+  filter: brightness(0.9) contrast(1.0)
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 0, 0, 0.5);
+}/*
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.5); /* Red overlay with 50% opacity */
+ /* mix-blend-mode: multiply; /* Blend the overlay with the background image */
+/*}*/
+.hero-content {
+  position: relative;
+  max-width: 800px auto;
+  padding: 20px;
+}
+.hero-content {
+  color: white; /* Text color */
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* White glow */
+}
+
+.hero h1 {
+  font-weight: 100%;
+  font-size: 70px;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+
+}
+.hero-description {
+  font-size: 15px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+ 
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ee0505;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+.btn:hover{
+  background-color: #000102;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
+}
+
+/* FAQ Section *//*
+.faq-container {
+  width: 70%;
+  max-width: 900px;
+  margin: 50px auto;
+  background: white;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-subtitle {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* FAQ Item Styles *//*
+.faq-item {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+/* Question Section *//*
+.faq-question {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* Hover Effect *//*
+.faq-question:hover {
+  background: #f7f7f7;
+}
+
+/* FAQ Answer *//*
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* Expand Answer *//*
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 10px 20px;
+}
+
+/* Icons *//*
+.faq-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate Icon when Active *//*
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+*/
+
+/* FAQ Container */
+.faq-container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 50px auto;
+ /* background: white;*/
+}
+
+/* FAQ Title */
+.faq-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-subtitle {
+  text-align: center;
+  font-size: 16px;
+ /* color: #666;*/
+  margin-bottom: 30px;
+}
+
+/* FAQ Grid Layout */
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 15px; /* Spacing between items */
+}
+
+/* FAQ Item */
+.faq-item {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* FAQ Question */
+.faq-question {
+  width: 100%;
+  padding: 18px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+/* Hover Effect */
+.faq-question:hover {
+  background: #f7f7f7;
+}
+
+/* FAQ Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 16px;
+ /* color: #333;*/
+ /* background-color: #f9f9f9;*/
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+/* Expand Answer */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 10px 20px;
+}
+
+/* FAQ Icon */
+.faq-icon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate Icon when Active */
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-grid {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+     /* background-size: contain; /* Fit the image within the container on smaller screens */
+     background-size: 100% 100%; /* Stretch the image to fit the container */
+    }
+}
+
+@media (max-width: 480px) {
+  .hero {
+     /* background-size: 100% auto; /* Stretch the image horizontally on very small screens */
+     height: auto; /* Adjust height for smaller screens */
+     min-height: 100vh; /* Ensure it covers at least the viewport height */
+    width: auto;
+   /* background-image: url('images/mobile.png');*/
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .package-card {
+      flex: 1 1 100%; /* One card per row on smaller screens */
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .packages {
+      flex-direction: column; /* Stack cards vertically on very small screens */
+  }
+}
+

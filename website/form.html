@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color:  #000000;
+    font-weight: 10000%;
+
+}
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500px;
+    margin-left: 8%;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  
+  }
+  
+  .left-panel {
+    padding-top: 90px; /* Adds space inside the section */
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    width: 40%;
+   
+    
+  }
+.left-panel p{
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+  
+.left-panel h2{
+  margin-left: 5%;
+}
+.left-panel h1{
+  margin-left: 5%;
+    margin-top: 30%;
+    margin-left: 5%;
+}
+  
+  .right-panel {
+    background-color: #fff;
+    padding: 20px;
+    width: 50%;
+    
+  }
+  
+  .right-panel h1 {
+
+    margin-top: 2%;
+    text-align: center;
+  }
+ 
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+   margin-left: 7%;
+  }
+  
+  button[type="submit"] {
+    background-color: #c60000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10%;
+    font-weight: bold;
+
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #000000;
+  }
+  .location-card {
+    margin-left: 5%;
+    display: flex; /* Aligns items in a row */
+    align-items: center; /* Vertically centers the icon and text */
+    gap: 40px; /* Adds spacing between the icon and text */
+    max-width: 250px;  /* Adjust width */
+    height: auto; /* Adjust height automatically */
+    background: white;
+    color: black;
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Removes underline from link */
+    transition: transform 0.2s ease-in-out;
+}/*
+.location-icon {
+    width: 5px;  /* Adjust width */
+   /* height: 5px; /* Adjust height */
+   /* margin-right: 8px; /* Adjust spacing *//*
+    
+}*/
+.location-icon img {
+    margin-top: -100%;
+    width: 30px;  /* Adjust width */
+    height: 50px; /* Adjust height */
+    object-fit: contain; /* Ensures proper scaling */
+}
+
+
+.location-details h3 {
+    font-size: 14px; /* Smaller heading */
+    margin: 5px 0;
+}
+
+.location-details p {
+    font-size: 12px; /* Smaller text */
+    margin: 2px 0;
+  
+   
+}
+.location-icon img:hover{
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+.location-card:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    
+  }
+ 
+
+.back-button-container {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  margin-top: -40px;
+}
+
+.back-button {
+  background-color: #ff0000;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.back-button svg {
+  fill: #ffffff;
+  stroke: #ffffff;
+  stroke-width: 2;
+}
+
+.back-button:hover {
+  background-color:  rgb(0, 0, 0);
+}
+
+
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .left-panel {
+    width: 100%;
+    padding-top: 0;
+    order: 2; /* Move the left panel to the bottom */
+  }
+  
+  .right-panel {
+    width: 100%;
+    order: 1; /* Move the right panel to the top */
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="back-button-container">
+        <a href="index.html">
+        <button class="back-button" onclick="location.href='\problem\index.html'">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6"></path>
+          </svg>
+        </button>
+      </div></a>
+        <div class="left-panel">
+          
+            <h1 class="left"></h1>
+          <div class="address">
+            <h2>Address</h2>
+          <!---  <p>Middle Center 8th floor, 379 Hudson St, New York, NY 10018 US</p>-->
+            <a href="https://maps.app.goo.gl/ARHt1haxhwMT5kni8" target="_blank" class="location-card">
+                <div class="location-icon">
+                   <img src="\images\location-removebg-preview.png"> <!--📍  You can replace this with an icon -->
+                </div>
+                <div class="location-details">
+                    <h3>Office Location</h3>
+                    <p>Hyderabad, India</p>
+                    <p>PL.NO.35, SY NO.207, Palace View</p>
+                    <p>Col, Ali Nagar, Crp Camp</p>
+                    <p>(Hyderabad), Bandlaguda,</p>
+                    <p>Hyderabad - 500005, Telangana</p>
+                </div>
+            </a>
+          </div>
+          <div class="lets-talk">
+            <h2>Let's Talk</h2>
+            <p>+91 9676080303</p>
+          </div>
+          <div class="general-support">
+            <h2>General Support</h2>
+            <p>contact@example.com</p>
+          </div>
+        </div>
+        <div class="right-panel">
+          <h1>Contact Us!</h1><br>
+          <form action="<?php echo get_template_directory_uri(); ?>/contact-handler.php" method="POST">
+
+          <!--<form action="contact.php" method="POST">-->
+            <div class="form-group">
+              <label for="name">TELL US YOUR NAME*</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">ENTER YOUR EMAIL*</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">ENTER PHONE NUMBER*</label>
+              <input type="text" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label for="message">MESSAGE*</label>
+              <textarea id="message" name="message" required rows="10" cols="10"></textarea>
+            </div>
+            <button type="submit">SEND MESSAGE </button>
+          </form>
+        </div>
+      </div>
+
+   
+    <script>
+
+document.getElementById("right-panel").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    let nameError = document.getElementById("nameError");
+    let emailError = document.getElementById("emailError");
+    let phoneError = document.getElementById("phoneError");
+    let messageError = document.getElementById("messageError");
+
+    // Reset error messages
+    nameError.textContent = "";
+    emailError.textContent = "";
+    phoneError.textContent = "";
+    messageError.textContent = "";
+
+    let isValid = true;
+
+    // Name validation
+    if (name === "") {
+        nameError.textContent = "Name is required!";
+        isValid = false;
+    }
+
+    // Email validation
+    if (email === "") {
+        emailError.textContent = "Email is required!";
+        isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+        emailError.textContent = "Invalid email format!";
+        isValid = false;
+    }
+
+    // Phone number validation (Only 10-digit numbers allowed)
+    if (phone === "") {
+        phoneError.textContent = "Phone number is required!";
+        isValid = false;
+    } else if (!/^\d{10}$/.test(phone)) {
+        phoneError.textContent = "Phone number must be 10 digits!";
+        isValid = false;
+    }
+
+    // Message validation (Minimum 10 characters)
+    if (message === "") {
+        messageError.textContent = "Message is required!";
+        isValid = false;
+    } else if (message.length < 10) {
+        messageError.textContent = "Message must be at least 10 characters!";
+        isValid = false;
+    }
+
+    // If all fields are valid, show the success popup
+    if (isValid) {
+        Swal.fire({
+            icon: "success",
+            title: "Thank You!",
+            text: "Your details have been successfully submitted.Make Sure that details you provides are true for further process",
+            confirmButtonText: "OK",
+        });
+    }
+});
+
+    </script>
+</body>
+</html>
